@@ -38,3 +38,23 @@ const calculateLoyaltyDiscount = (amount, years) => {
 
 calculateLoyaltyDiscount(100, 6); //Expected output: $85.00
 calculateLoyaltyDiscount(200, 2); //Expected output: $190.00
+
+// Task 4 - Product Shipping Cost Calculation
+
+function calculateShippingCost(weight, location, expedited = false) {
+
+    let cost = 0; //Original cost
+
+    if (location === 'USA') {
+        cost= 5 + (0.5 * weight); //$5 plus $0.5 per pound
+    } else if (location === 'Canada') {
+        cost = 10 + (0.7 * weight); //$10 plus $0.7 per pound
+    }
+    
+    if (expedited) cost += 10; //$10 expedited fee
+
+    console.log('Shipping cost: $${cost.toFixed(2)}'); //Log shipping cost
+};
+
+calculateShippingCost(10, 'USA', true); //Expected output: $20.00
+calculateShippingCost(5, 'Canada', false); //Expected output: $13.50
