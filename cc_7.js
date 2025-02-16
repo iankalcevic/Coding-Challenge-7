@@ -100,3 +100,15 @@ let budget = createBudgetTracker(); //Budget tracker instance
 
 budget(300); //Expected output: -$300
 budget(200); //Expected output: -$500
+
+//Task 8 - Business Growth Projection
+
+function calculateGrowth(years, revenue) {
+
+    if (years >= 10) return 'Projected revenue: $${revenue.toFixed(2)}' //Stop after 10 year
+
+    return calculateGrowth(years + 1, revenue * 1.05); //Increase revenue by 5%
+};
+
+console.log(calculateGrowth(8, 1000)); //Expected output: $1102.50
+console.log(calculateGrowth(5, 5000)); //Expected output: $6381.41
