@@ -58,3 +58,15 @@ function calculateShippingCost(weight, location, expedited = false) {
 
 calculateShippingCost(10, 'USA', true); //Expected output: $20.00
 calculateShippingCost(5, 'Canada', false); //Expected output: $13.50
+
+// Task 5 - Business Loan Interest Calculation
+
+function calculateLoanInterest(principal, rate, years) {
+    
+    const interest = principal * rate * years; //Formula for interest
+
+    console.log('Total interest: $${interest.toFixed(2)}'); //Log total interest
+};
+
+calculateLoanInterest(1000, 0.05, 3); //Expected output: $150.00
+calculateLoanInterest(5000, 0.07, 5); //Expected output: $1750.00
