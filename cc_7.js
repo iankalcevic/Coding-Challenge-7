@@ -70,3 +70,16 @@ function calculateLoanInterest(principal, rate, years) {
 
 calculateLoanInterest(1000, 0.05, 3); //Expected output: $150.00
 calculateLoanInterest(5000, 0.07, 5); //Expected output: $1750.00
+
+// Task 6 - Filtering High Value Transaction
+
+let transactions = [500, 1200, 3000, 800, 2200]; //Set an array of transactions
+
+function filterHighValueTransactions(transactions, filterFunction) {
+
+    const result = transactions.filter(filterFunction); //Apply the filter function
+
+    console.log("High-value transactions:", result); //Log filtered transaction
+};
+
+filterHighValueTransactions(transactions, amount => amount > 1000); //Expected output: 1200, 3000, 2200
